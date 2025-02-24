@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Amazon - Sustainability reports</title>        
+		<!-- Custom icon on page -->
+		<link rel="icon" type="image/png" href="assets/favicon.png"/>
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />	
+		<!-- snackbar theme CSS -->
+		<link href="css/snackbar.css" rel="stylesheet" />		
+		<script>
+			var TAG = "REPORTS";
+		</script>
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation defines a set of navigation links -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">                    
+					<a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary" id="title_logo"></span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html" id="nav_menu_home"></a></li>
+							<li class="nav-item"><a class="nav-link" href="dimensions.html" id="nav_menu_dimensions"></a></li>
+                            <li class="nav-item"><a class="nav-link" href="reports.html" id="nav_menu_reports"></a></li>                            
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_menu_languages"></a>
+								<ul class="dropdown-menu">
+									<!-- Drop down menu that get the possibility to change the language -->						
+									<li><a class="dropdown-item" href="javascript:switchLang('en-gb');">English</a></li>
+									<li><a class="dropdown-item" href="javascript:switchLang('it-it');">Italiano</a></li>
+								</ul>
+							</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Snack bar usefull for the message info-->
+			<div id="snackbar"></div>
+            <div class="container px-5 my-5">				
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" id="title_reports"></span></h1>
+					<div class="fs-3 fw-light text-muted" id="title_reports_info"></div>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Reports Section-->
+                        <section>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0" id="label_latest_reports"></h2>
+                                <!-- Download report button-->                                
+                                <a class="btn btn-primary px-4 py-3" id="start_download_report">
+                                    <div class="d-inline-block bi bi-download me-2"></div>
+									<div class="d-inline-block" id="button_downloads"></div>                                    
+                                </a>
+                            </div>
+                            <!-- Report Card latest-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2" id="label_year"></div>
+                                                <div class="small fw-bolder" id="label_sustainability"></div>
+                                                <div class="small fw-bolder" id="label_report"></div>
+                                                <div class="small text-muted">PDF, 15.8 MB</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8"><div id="description_download_sust"></div></div>
+                                    </div>
+                                </div>
+                            </div>                            						
+                        </section>  
+						<section>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0" id="label_latest_summary"></h2>
+                                <!-- Download report button-->                                
+                                <a class="btn btn-primary px-4 py-3" id="start_download_summaries">
+                                    <div class="d-inline-block bi bi-download me-2"></div>
+									<div class="d-inline-block" id="button_download_summary"></div>                                    
+                                </a>
+                            </div>
+                            <!-- Report Card latest summaries-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2" id="label_year"></div>
+                                                <div class="small fw-bolder" id="label_executive"></div>
+                                                <div class="small fw-bolder" id="label_summary"></div>
+                                                <div class="small text-muted">PDF, 2.7 MB</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8"><div id="description_download_exesust"></div></div>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2" id="label_year"></div>
+                                                <div class="small fw-bolder" id="label_aws"></div>
+                                                <div class="small fw-bolder" id="label_summaryaws"></div>
+                                                <div class="small text-muted">PDF, 2.7 MB</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8"><div id="description_download_exeaws"></div></div>
+                                    </div>
+                                </div>
+                            </div>							
+                        </section>  						
+                        <!-- Divider-->
+                        <div class="pb-5"></div>
+                        <!-- Some dates Section-->
+                        <section>
+							<div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0" id="label_latest_review"></h2>                                
+                            </div>
+                            <!-- Dates Card-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <!-- Enviroment list-->
+                                    <div class="mb-5">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-globe-americas"></i></div>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" id="dates_title_environmet"></span></h3>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment1"></div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment2"></div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment3"></div></div>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment4"></div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment5"></div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_environment6"></div></div>
+                                        </div>
+                                    </div>
+                                    <!-- Economic list-->
+                                    <div class="mb-0">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-bank2"></i></div>											
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" id="dates_title_governance"></span></h3>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_governance1"></div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_governance2"></div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_governance3"></div></div>
+										</div>                                        
+                                    </div>
+									<!-- Social list-->
+                                    <div class="mb-0">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-balloon-heart"></i></div>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" id="dates_title_social"></span></h3>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_social1"></div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_social2"></div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100" id="dates_msg_social3"></div></div>
+										</div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0" id="label_copyright"></div></div>
+					<!-- Link always to Amazon pages-->	
+                    <div class="col-auto">
+                        <a class="small" href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" id="label_privacy"></a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088" id="label_terms"></a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="https://email.aboutamazon.com/l/637851/2020-10-29/pd87g?Traffic_Source=Blog&Module=hat" id="label_newsletter"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core JS-->        		
+		<script type="text/javascript" src="js/lib/jquery-3.7.1.min.js"></script>		
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/logs/logger.js"></script>						
+        <script src="js/scripts.js"></script>
+		<!-- Specific part of the script that add the attribute for dowloads settings the specific href url, for now they are static but for the future a good implementation some api to get always the latest one -->	
+		<script>
+			$('a#start_download_report').attr({target: '_blank', href  : 'repo/2023-amazon-sustainability-report.pdf'});			
+			$('a#start_download_summaries').attr({target: '_blank', href  : 'repo/Summaries.zip'});			
+		</script>        
+    </body>	
+</html>
